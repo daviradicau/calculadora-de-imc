@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.hide {
+    z-index: -1;
+    opacity: 0;
+}
+
+.roll {
+    animation: rollDown 2s;
+}
+
+body {
+    height: 100vh;
+    background-color: #040924;
+    display: grid;
+    place-content: center;
+    font-family: 'Roboto';
+}
+
+#error-popup {
+    width: 100vw;
+    height: 3.6rem;
+    top: -3.6rem;
+    background-color: #F03E3E;
+    position: absolute;
+    display: grid;
+    place-content: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+}
+
+.popup-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: grid;
+    place-content: center;
+    background-color: rgba(00, 00, 00, .5);
+    transition: .2s;
+}
+
+#popup {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    background-color: white;
+    border-radius: .6rem;
+}
+
+#popup h1 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: #0C3440;
+}
+
+#close-popup {
+    position: absolute;
+    margin: -7rem 0 0 31rem;
+    border: none;
+    background: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+form {
+    width: 42.8rem;
+    background-color: white;
+    border-radius: .6rem;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+form > h1 {
+    font-size: 3.2rem;
+    color: #0C3440;
+    margin-bottom: 3.2rem;
+}
+
+label h1 {
+    font-size: 1.4rem;
+    color: #00453A;
+    margin-bottom: .8rem;
+}
+
+label input {
+    width: 30rem;
+    height: 5.2rem;
+    padding: 1.6rem;
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    color: rgba(73, 80, 87, .5);
+    background-color: #DCE2E9;
+    border: 2px solid rgba(73, 80, 87, .3);
+    border-radius: .4rem;
+    margin-bottom: 1.6rem;
+    outline: none;
+}
+
+label input:focus {
+    border: 2px solid #02799D;
+    color: #212529;    
+}
+
+#calc-button {
+    width: 30rem;
+    height: 5.2rem;
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    background-color: #02799D;
+    border: none;
+    border-radius: .4rem;
+    margin-top: 1.6rem;
+    transition: .2s;
+}
+
+#calc-button:hover {   
+    background-color: #008bb5;
+}
+
+@keyframes rollDown {
+    0% {
+        transform: translateY(0);
+    } 25% {
+        transform: translateY(100%);
+    } 75% {
+        transform: translateY(100%);
+    } 100% {
+        transform: translateY(0);
+    }
+}
