@@ -11,13 +11,8 @@ function errorMessage(message) {
     }, 2000)
 }
 
-function showIMC(imc) {
-    popupImc.innerHTML = `Seu imc é de ${imc}`
-    popupWrapper.classList.remove("hide")
-}
-
-function closePopup() {
-    popupWrapper.classList.add("hide")    
+function closeIMC() {
+    popupWrapper.classList.add("hide")
 }
 
 function calcIMC(e) {
@@ -26,7 +21,8 @@ function calcIMC(e) {
     let height = Number(document.querySelector("#height").value)
     if (weight != 0 && height != 0) {
         let imc = (weight / (height ** 2)).toFixed(2)
-        showIMC(imc)
+        popupImc.innerHTML = `Seu imc é de ${imc}`
+        popupWrapper.classList.remove("hide")
         document.querySelector("#weight").value = ""
         document.querySelector("#height").value = ""
     } else {

@@ -49,6 +49,7 @@ body {
 }
 
 #popup {
+    width: 41rem;
     padding: 4.8rem 6.4rem 6.4rem 6.4rem;
     background-color: white;
     border-radius: .6rem;
@@ -67,30 +68,33 @@ body {
     background: none;
 }
 
+#close-popup:hover {
+    scale: 1.1;
+}
+
 button:hover {
     cursor: pointer;
 }
 
-form {
+main {
     width: 42.8rem;
     background-color: white;
     border-radius: .6rem;
     padding: 4.8rem 6.4rem 6.4rem 6.4rem;
 }
 
-form > h1 {
+main > h1 {
     font-size: 3.2rem;
     color: #0C3440;
-    margin-bottom: 3.2rem;
-}
-
-label h1 {
-    font-size: 1.4rem;
-    color: #00453A;
     margin-bottom: .8rem;
 }
 
-label input {
+label {
+    font-size: 1.4rem;
+    color: #00453A;
+}
+
+.input-wrapper input {
     width: 30rem;
     height: 5.2rem;
     padding: 1.6rem;
@@ -100,11 +104,12 @@ label input {
     background-color: #DCE2E9;
     border: 2px solid rgba(73, 80, 87, .3);
     border-radius: .4rem;
+    margin-top: .8rem;
     margin-bottom: 1.6rem;
     outline: none;
 }
 
-label input:focus {
+.input-wrapper input:focus {
     border: 2px solid #02799D;
     color: #212529;    
 }

@@ -16,28 +16,28 @@
     <div class="popup-wrapper hide">
         <div id="popup">
             <h1>Seu imc é de 00.00</h1>
-            <button id="close-popup" onclick="closePopup()"><img src="images/close.svg" alt=""></button>
+            <button id="close-popup" onclick="closeIMC()"><img src="images/close.svg" alt=""></button>
         </div>
     </div>
-    <form>
+    <main>
         <h1>Cálculo de IMC</h1>
 
-        <div class="label-wrapper">
+        <form>
 
-            <label for="weight">
-                <h1>Peso (kg)</h1>
+            <div class="input-wrapper">
+                <label for="weight">Peso (kg)</label>
                 <input type="number" id="weight">
-            </label>
+            </div>
     
-            <label for="height">
-                <h1>Altura (m)</h1>
+            <div class="input-wrapper">
+                <label for="height">Altura (m)</label>
                 <input type="number" id="height">
-            </label>
+            </div>
 
             <button type="submit" id="calc-button" onclick="calcIMC(event)">Calcular IMC <img src="images/arrow.svg" alt=""></button>
 
-        </div>
-    </form>
+        </form>
+    </main>
 </body>
 <script src="./main.js"></script>
 </html>
