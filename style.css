@@ -8,15 +8,6 @@
     font-size: 62.5%;
 }
 
-.hide {
-    z-index: -1;
-    opacity: 0;
-}
-
-.roll {
-    animation: rollDown 2s;
-}
-
 body {
     height: 100vh;
     background-color: #040924;
@@ -25,10 +16,10 @@ body {
     font-family: 'Roboto';
 }
 
-#error-popup {
+.error-popup {
     width: 100vw;
     height: 3.6rem;
-    top: -3.6rem;
+    top: 0;
     background-color: #F03E3E;
     position: absolute;
     display: grid;
@@ -36,6 +27,11 @@ body {
     font-size: 1.6rem;
     font-weight: 500;
     color: white;
+    transition: transform .3s;
+}
+
+.error-popup.hide {
+    transform: translateY(-3.6rem);
 }
 
 .popup-wrapper {
@@ -48,8 +44,13 @@ body {
     transition: .2s;
 }
 
+.popup-wrapper.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
 #popup {
-    width: 41rem;
+    position: relative;
     padding: 4.8rem 6.4rem 6.4rem 6.4rem;
     background-color: white;
     border-radius: .6rem;
@@ -57,13 +58,13 @@ body {
 
 #popup h1 {
     font-size: 3.2rem;
-    font-weight: 500;
     color: #0C3440;
 }
 
 #close-popup {
     position: absolute;
-    margin: -7rem 0 0 31rem;
+    top: 1.6rem;
+    right: 1.6rem;
     border: none;
     background: none;
 }
@@ -130,16 +131,4 @@ label {
 
 #calc-button:hover {   
     background-color: #008bb5;
-}
-
-@keyframes rollDown {
-    0% {
-        transform: translateY(0);
-    } 25% {
-        transform: translateY(100%);
-    } 75% {
-        transform: translateY(100%);
-    } 100% {
-        transform: translateY(0);
-    }
 }

@@ -12,11 +12,11 @@
     <title>Calculadora de IMC</title>
 </head>
 <body>
-    <div id="error-popup">Erro</div>
+    <div class="error-popup hide">Erro</div>
     <div class="popup-wrapper hide">
         <div id="popup">
             <h1>Seu imc é de 00.00</h1>
-            <button id="close-popup" onclick="closeIMC()"><img src="images/close.svg" alt=""></button>
+            <button id="close-popup"><img src="images/close.svg" alt=""></button>
         </div>
     </div>
     <main>
@@ -26,18 +26,18 @@
 
             <div class="input-wrapper">
                 <label for="weight">Peso (kg)</label>
-                <input type="number" id="weight">
+                <input type="text" id="weight" autocomplete="off">
             </div>
     
             <div class="input-wrapper">
                 <label for="height">Altura (m)</label>
-                <input type="number" id="height">
+                <input type="text" id="height" autocomplete="off">
             </div>
 
-            <button type="submit" id="calc-button" onclick="calcIMC(event)">Calcular IMC <img src="images/arrow.svg" alt=""></button>
+            <button type="submit" id="calc-button">Calcular IMC <img src="images/arrow.svg" alt=""></button>
 
         </form>
     </main>
 </body>
-<script src="./main.js"></script>
+<script src="./js/main.js" type="module"></script>
 </html>
